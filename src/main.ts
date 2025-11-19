@@ -26,16 +26,15 @@ async function findProducto(id:number): Promise<void>{
         console.log('------------------------')
             return
         } 
-            getProducto(id)
-        .then((producto: Producto) => {
-            console.log(producto, 'producto');
-            // Mostramos los campos del producto, no el objeto completo
-            salida.textContent = `El producto buscado es: ${producto.nombre} con stock de ${producto.stock}`;
-        })
-        .catch((error) => {
-            console.log(error, 'ERROR');
-            salida.textContent = typeof error === 'string' ? error : "Ha ocurrido un error";
-        });
+        getProducto(id)
+            .then((producto: Producto) => {
+                console.log(producto, 'producto');
+                salida.textContent = `El producto buscado es: ${producto.nombre} con stock de ${producto.stock}`;
+            })
+            .catch((error) => {
+                console.log(error, 'ERROR');
+                salida.textContent = typeof error === 'string' ? error : "Ha ocurrido un error";
+            });
 }
 
 if (btn) {
