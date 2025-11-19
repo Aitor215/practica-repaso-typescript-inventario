@@ -1,0 +1,21 @@
+{
+  "name": "promesasproducto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aitor215/practica-repaso-typescript-inventario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aitor215/practica-repaso-typescript-inventario/issues"
+  },
+  "homepage": "https://github.com/Aitor215/practica-repaso-typescript-inventario#readme"
+}
