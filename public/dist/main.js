@@ -23,16 +23,16 @@ async function findProducto(id) {
         console.log('------------------------');
         return;
     }
-    try {
-        const producto = await getProducto(id);
-        console.log(producto, 'producto');
-        salida.textContent= `El producto buscado es:  ${producto.nombre} con stock de ${producto.stock}`
-    }
-    catch (error) {
-        console.log(error, 'ERROR');
-        salida.textContent = typeof error === 'string' ? error : "Ha ocurrido un error";
-    }
-}
+        getProducto(id)
+            .then(producto => {
+                console.log(producto, 'producto');
+                salida.textContent = `El producto buscado es: ${producto.nombre} con stock de ${producto.stock}`;
+            })
+            .catch((error) => {
+                console.log(error, 'ERROR');
+                salida.textContent = typeof error === 'string' ? error : "Ha ocurrido un error";
+            });
+        }
 if (btn) {
     btn.addEventListener("click", () => {
         try {
